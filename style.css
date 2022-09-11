@@ -5,13 +5,32 @@
   margin: 0;
   padding: 0;
 	font-family: "Titillium Web", sans-serif;
-	font-weight: 700;
+	/* font-weight: 700; */
   text-align: center;
+}
+
+*:visited{
+  color: #000000;
+}
+
+*:link{
+  color: #000000;
 }
 
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  background: #e2e2e2;
+}
+
+:root {    
+  --level-1: #78ABB1;
+  --level-2: #727272;
+  --level-3: #244D74;
+  --level-4: #608ab1;
+  --level-5: #F6F6F6;
+  --black: black;
+  --white: white;
 }
 
 /*-----> CONTAINER <-----*/
@@ -19,16 +38,17 @@ html {
   height: 100vh;
   overflow: auto;
   scroll-snap-type: x var(--tw-scroll-snap-strictness);
+  /* margin-bottom: 20rem; */
 }
 
 .org {
   width: max-content;
-  margin: 3rem;
+  margin: 4rem ;
 }
 
 .org ul {
   padding-top: 1rem;
-  position: sticky;
+  position: relative;
   margin: 0rem 0.1rem 0rem 0.1rem;
 }
 
@@ -36,7 +56,8 @@ html {
   float: left;
   list-style-type: none;
   position: relative;
-  padding: 2.2rem 0.05rem 0 0.05rem;
+  padding: 2.2rem 0.05rem 0rem 0.05rem;
+  margin: 0.1rem;
 }
 
 /*-----> STYLE LINES <-----*/
@@ -51,92 +72,34 @@ html {
   width: 50%;
   height: 0rem;
 }
-/* --> Line right <-- */
 .org li:last-child::before {
   border-right: 0.3rem solid #000000;
   right: 50%;
   left: auto;
 }
-/* --> Line left <-- */
 .org li::after {
   right: auto;
   left: 50%;
   border-left: 0.3rem solid #000000;
+
 }
-/* fail */
 .org ul::before {
   content: "";
   position: absolute;
   top: 0;
   left: 50%;
   border-left: 0.3rem solid #000000;
-  height: 100%;
-}
-
-.org li:only-child {
-  padding-top: 0;
-}
-.org li:first-child::before,
-.org li:last-child::after {
-  border: 0rem none;
-  padding: 0;
-}
-
-/* STYLE TEXT */
-.org li a p{
-  font-weight: 700;
-}
-
-/*-----> CONFIG RECTANGLE<-----*/
-.org li a {
-  vertical-align: middle;
-  padding: 0.3rem 0.9rem; 
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  /* text-align: center; */
-  height: 4rem;
-  width: 15rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-size: 1rem;
-  display: inline-block;
-  border-radius: 1rem;
+  height: 1.1rem;
 
 }
-
-/*-----> MODELS RECTANGLE <-----*/
-.rectangle-lv1 {
-  border: 0.3rem solid #4a5b74;
-  background: #ffcd4c;
-}
-.rectangle-lv2 {
-  border: 0.3rem solid #4a5b74;
-  background: #ffcd4c;
-  /* height: 4rem; */
-}
-.rectangle-lv3 {
-  border: 0.3rem solid #4a5b74;
-  background: #ffffa1;
-}
-.rectangle-lv4 {
-  border: 0.2rem solid #4a5b74;
-  background: #ced8ed;
-}
-
-.none {
-  visibility: hidden;
-}
-
 .space-lv3::before{
   content: "";
   position: absolute;
   top: 0;
   left: 50%;
   border-left: 0.3rem solid #000000;
-  height: 8rem;
+  height: 9rem;
+  cursor: default;
 }
 .space-lv2::before{
   content: "";
@@ -147,27 +110,181 @@ html {
   height: 2.2rem;
 }
 
-
-.rectangle-lv4 p{
-  display: flex;
-  align-items: center;
-  height: 4rem;
-  justify-content: center;
+.org li:only-child {
+  padding-top: 0;
+}
+.org li:first-child::before,
+.org li:last-child::after {
+  border: 0rem none;
 }
 
+/*-----> CONFIG RECTANGLE<-----*/
+.org li a {
+  vertical-align: middle;
+  padding: 0rem 0.3rem; 
+  height: 6rem; /*---> HEIGHT RECTANGLE <---*/
+  width: 15rem; /*---> WITDH RECTANGLE <---*/
+  text-decoration: none;
+  text-transform: uppercase;
+  /* letter-spacing: 0.1rem; */
+  display: inline-block;
+  border-radius: 1rem;
+  cursor: default;
+}
+
+/*-----> MODELS RECTANGLE <-----*/
+.rectangle-lv1 {
+  border: 0.rem solid #000000;
+  background: var(--level-1);
+}
+.rectangle-lv2 {
+  border: 0.rem solid #000000;
+  background: var(--level-2);
+}
+.rectangle-lv3 {
+  border: 0.rem solid #000000;
+  background: var(--level-3);
+}
 .title-lv4 {
-  border: 0.2rem solid #4a5b74;
-  /* background: #ced8ed; */
+  border: 0.rem solid #000000;
+  background: var(--level-4);
+}
+.rectangle-lv4 {
+  border: 0.1rem solid #000000;
+  background: var(--level-5);
 }
 
+/*-----> STYLES TEXT <-----*/
 .title-lv4 p{
   display: flex;
   align-items: center;
-  height: 4rem;
+  height: 6rem; /*---> HEIGHT RECTANGLE <---*/
   justify-content: center;
   font-size: 1rem;
 }
 
-.test{
-  display: block;
+.rectangle-lv1 > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem; /*---> HEIGHT RECTANGLE <---*/
+}
+.rectangle-lv2 > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem; /*---> HEIGHT RECTANGLE <---*/
+}
+.rectangle-lv3 > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem; /*---> HEIGHT RECTANGLE <---*/
+}
+
+.rectangle-lv4 > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem; /*---> HEIGHT RECTANGLE <---*/
+}
+
+/*-----> HOVER <-----*/
+.rectangle-lv1:hover{
+  background: var(--black);
+  color: var(--white);
+  transition: all 0.5s ;
+  transform: scale(1.05); 
+  cursor: pointer;
+
+}
+
+.rectangle-lv1 h4{
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.rectangle-lv1 p{
+  font-size: 1.3rem;
+  color: var(--white);
+}
+
+.rectangle-lv2:hover{
+  background: var(--black);
+  color: var(--white);
+  transition: all 0.5s ;
+  transform: scale(1.05); 
+  cursor: pointer;
+
+}
+
+.rectangle-lv2 h4{
+  font-size: 1.3rem;
+  color: var(--white);
+}
+
+.rectangle-lv2 p{
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.rectangle-lv3:hover{
+  background: var(--black);
+  color: var(--white);
+  transition: all 0.5s ;
+  transform: scale(1.05); 
+  cursor: pointer;
+
+}
+
+.rectangle-lv3 h4{
+  font-size: 1.3rem;
+  color: var(--white);
+}
+
+.rectangle-lv3 p{
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.title-lv4:hover{
+  background: var(--black);
+  transition: all 0.5s ;
+  transform: scale(1.05);
+  color: var(--white);
+  cursor: pointer;
+
+}
+
+.title-lv4 p{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.rectangle-lv4:hover{
+  background: var(--black);
+  transition: all 0.5s ;
+  transform: scale(1.05);
+  color: var(--white);
+  cursor: pointer;
+
+}
+
+.rectangle-lv4 h4{
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.rectangle-lv4 p{
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+
+/*---> <---*/
+.none {
+  visibility: hidden;
+  pointer-events: none;
 }
