@@ -5,8 +5,8 @@
   margin: 0;
   padding: 0;
 	font-family: "Titillium Web", sans-serif;
-	/* font-weight: 700; */
   text-align: center;
+  text-decoration: none;
 }
 
 *:visited{
@@ -42,22 +42,30 @@ html {
 }
 
 .org {
+  display: flex;
+  /* align-items: center; */
+  /* grid-template-rows: repeat(,1fr); */
+  flex-direction: column;
+  /* justify-content: center; */
+  margin: 1rem;
   width: max-content;
-  margin: 4rem ;
+
+  /* width: max-content;
+  margin: 4rem ; */
 }
 
 .org ul {
   padding-top: 1rem;
   position: relative;
-  margin: 0rem 0.1rem 0rem 0.1rem;
+  /* margin: 0rem 0.1rem 0rem 0.1rem; */
 }
 
 .org li {
   float: left;
   list-style-type: none;
   position: relative;
-  padding: 2.2rem 0.05rem 0rem 0.05rem;
-  margin: 0.1rem;
+  /* padding: 2.2rem 0.05rem 0rem 0.05rem; */
+  /* margin: 0.1rem; */
 }
 
 /*-----> STYLE LINES <-----*/
@@ -121,7 +129,7 @@ html {
 /*-----> CONFIG RECTANGLE<-----*/
 .org li a {
   vertical-align: middle;
-  padding: 0rem 0.3rem; 
+  /* padding: 0rem 0.3rem;  */
   height: 6rem; /*---> HEIGHT RECTANGLE <---*/
   width: 15rem; /*---> WITDH RECTANGLE <---*/
   text-decoration: none;
@@ -132,64 +140,33 @@ html {
   cursor: default;
 }
 
-/*-----> MODELS RECTANGLE <-----*/
-.rectangle-lv1 {
+/* testeos */
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.lv1{
+  display: flex;
+  justify-content: center;
+}
+
+.rectangle-lv1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  min-height: 6rem;
   border: 0.rem solid #000000;
   background: var(--level-1);
-}
-.rectangle-lv2 {
-  border: 0.rem solid #000000;
-  background: var(--level-2);
-}
-.rectangle-lv3 {
-  border: 0.rem solid #000000;
-  background: var(--level-3);
-}
-.title-lv4 {
-  border: 0.rem solid #000000;
-  background: var(--level-4);
-}
-.rectangle-lv4 {
-  border: 0.1rem solid #000000;
-  background: var(--level-5);
+  border-radius: 1rem;
 }
 
-/*-----> STYLES TEXT <-----*/
-.title-lv4 p{
-  display: flex;
-  align-items: center;
-  height: 6rem; /*---> HEIGHT RECTANGLE <---*/
-  justify-content: center;
-  font-size: 1rem;
+.rectangle-lv1 a{
+  color: white;
 }
 
-.rectangle-lv1 > div{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 6rem; /*---> HEIGHT RECTANGLE <---*/
-}
-.rectangle-lv2 > div{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 6rem; /*---> HEIGHT RECTANGLE <---*/
-}
-.rectangle-lv3 > div{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 6rem; /*---> HEIGHT RECTANGLE <---*/
-}
-
-.rectangle-lv4 > div{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 6rem; /*---> HEIGHT RECTANGLE <---*/
-}
-
-/*-----> HOVER <-----*/
 .rectangle-lv1:hover{
   background: var(--black);
   color: var(--white);
@@ -199,92 +176,153 @@ html {
 
 }
 
-.rectangle-lv1 h4{
-  font-size: 1.5rem;
+.lv2-rectangle{
+  display: flex;
+  margin: 0.1rem;
+  align-items: center;
+  justify-content: center;
+  min-width: 15rem;
+  height: 6rem;
+  text-align: center;
+  border: 0.rem solid #000000;
+  background: var(--level-2);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
   color: var(--white);
+  /* float: right; */
+    /* display: flex; */
+    /* align-items: center; */
+    word-break:keep-all;
+    word-break:break-all;
+    /* margin: 0 0 1em 1em; */
+    overflow: hidden;
+    
 }
 
-.rectangle-lv1 p{
-  font-size: 1.3rem;
-  color: var(--white);
-}
+/* .lv2-rectangle div{
 
-.rectangle-lv2:hover{
+  word-wrap: break-word;
+} */
+
+.lv2-rectangle:hover{
   background: var(--black);
   color: var(--white);
   transition: all 0.5s ;
   transform: scale(1.05); 
   cursor: pointer;
-
+  
 }
 
-.rectangle-lv2 h4{
-  font-size: 1.3rem;
+.lv2-space{
+  margin: 0 1rem 0 1rem;
+}
+
+.lv3-rectangle{
+  display: flex;
+  margin: 0.1rem;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  min-height: 6rem;
+  text-align: center;
+  border: 0rem solid #000000;
+  background: var(--level-3);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
   color: var(--white);
 }
 
-.rectangle-lv2 p{
-  font-size: 1rem;
-  color: var(--white);
+.test{
+  min-width: 15rem;
+  height: 6rem;
 }
 
-.rectangle-lv3:hover{
+.lv3-rectangle:hover{
   background: var(--black);
   color: var(--white);
   transition: all 0.5s ;
   transform: scale(1.05); 
   cursor: pointer;
-
 }
 
-.rectangle-lv3 h4{
-  font-size: 1.3rem;
+.lv3-space{
+  margin: 0 1rem 0 1rem;
+}
+
+.lv4-rectangle{
+  display: flex;
+  margin: 0.1rem;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  min-height: 6rem;
+  text-align: center;
+  border: 0rem solid #000000;
+  background: var(--level-4);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
   color: var(--white);
 }
 
-.rectangle-lv3 p{
-  font-size: 1rem;
-  color: var(--white);
-}
-
-.title-lv4:hover{
+.lv4-rectangle:hover{
   background: var(--black);
+  color: var(--white);
   transition: all 0.5s ;
-  transform: scale(1.05);
-  color: var(--white);
+  transform: scale(1.05); 
   cursor: pointer;
-
 }
 
-.title-lv4 p{
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--white);
+.lv4-space{
+  margin: 0 1rem 0 1rem;
 }
 
-.rectangle-lv4:hover{
+.lv5-rectangle{
+  display: flex;
+  margin: 0.1rem;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  min-height: 6rem;
+  text-align: center;
+  border: 0.1rem solid #000000;
+  background: var(--level-5);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  color: var(--black);
+}
+
+.lv5-rectangle:hover{
   background: var(--black);
-  transition: all 0.5s ;
-  transform: scale(1.05);
   color: var(--white);
+  transition: all 0.5s ;
+  transform: scale(1.05); 
   cursor: pointer;
-
 }
 
-.rectangle-lv4 h4{
-  font-size: 1.1rem;
-  font-weight: 800;
+.lv5-space{
+  margin: 0 1rem 0 1rem;
 }
-
-.rectangle-lv4 p{
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-
 
 /*---> <---*/
 .none {
   visibility: hidden;
   pointer-events: none;
+}
+
+.line::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 0.3rem solid #000000;
+    height: 7rem;
+    cursor: default;
+}
+
+h4{
+  font-size: 1.3rem;
+}
+
+p{
+  font-size: 1rem;
 }
